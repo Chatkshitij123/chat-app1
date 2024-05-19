@@ -18,7 +18,7 @@ const app = express();
 //to accept the json data
 app.use(express.json());
 // Enable CORS for all routes with specific origins
-const allowedOrigins = ['http://localhost:3000', 'https://talk-a-tive-d2wp.onrender.com'];
+const allowedOrigins = ['http://localhost:3000', 'https://talk-a-tive-q953.onrender.com'];
 app.use(cors({
   origin: function (origin, callback) {
     // Allow requests with no origin (like mobile apps or curl requests)
