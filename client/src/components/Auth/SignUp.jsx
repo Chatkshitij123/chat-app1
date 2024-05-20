@@ -317,7 +317,7 @@ const SignUp = () => {
         
         },
        };
-       const {data} = await axios.post("/api/user",
+       const {data} = await axios.post(`{process.env.REACT_APP_API_URL}/api/user`,
     {name, email, password, pic},
 config
 );
