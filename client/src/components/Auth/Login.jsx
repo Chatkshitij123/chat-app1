@@ -9,8 +9,8 @@ import { useChatState } from '../../Context/ChatProvider';
 const Login = () => {
   
     const [show, setShow] = useState(false);
-    const [email, setEmail] = useState();
-    const [password, setPassword] = useState();
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
     const [loading, setLoading] = useState(false);
     const toast = useToast();
     const navigate = useNavigate(); // Replace useHistory with useNavigate
@@ -39,10 +39,18 @@ const Login = () => {
                 "Content-type":"application/json",
             },
            };
-           const {data} = await axios.post(`${process.env.REACT_APP_API_URL}/api/user/login`,
-        {email, password},
+    //        const {data} = await axios.post(`${process.env.REACT_APP_API_URL}/api/user/login`,
+    //     {email, password},
+    // config
+    // );
+    const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/user/login`,
+    { email, password },
     config
-    );
+);
+const { data } = response;
+if (!data) {
+    throw new Error("Unexpected response format");
+}
     toast({
         title: "Login Successfull",
         status: "success",
@@ -56,13 +64,13 @@ const Login = () => {
       navigate("/chats"); // Replace history.push with navigate
         } catch (error) {
             toast({
-                title: "Error-Occured",
-                description: error.response.data.message,
+                title: "Error Occurred",
+                description: error.response?.data?.message || error.message,
                 status: "error",
                 duration: 5000,
                 isClosable: true,
                 position: "bottom",
-              });
+            });
               setLoading(false);  
         }
       };
