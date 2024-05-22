@@ -18,16 +18,14 @@ const app = express();
 //to accept the json data
 app.use(express.json());
 // Enable CORS for all routes with specific origins
-const allowedOrigins = ['http://localhost:8000', 'https://talk-a-tive-q953.onrender.com'];
+const allowedOrigins = ['http://localhost:8000'];
 app.use(cors({
-  origin: function (origin, callback) {
-    // Allow requests with no origin (like mobile apps or curl requests)
-    if (!origin) return callback(null, true);
-    if (allowedOrigins.indexOf(origin) === -1) {
-      const msg = 'The CORS policy for this site does not allow access from the specified Origin.';
-      return callback(new Error(msg), false);
+  origin: function(origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
     }
-    return callback(null, true);
   }
 }));
 
@@ -37,18 +35,20 @@ app.use("/api/message",messageRoutes);
 
 // -----------------------Deployment-------------------------------------
 
-const __dirname1 = path.resolve();
-console.log(__dirname1);
+// const __dirname1 = path.resolve();
+// console.log(__dirname1);
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname1,'/client/build')));
-  app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname1,'/client/build/index.html'));
-  });
+app.use(express.static(path.join(__dirname,"/client/build")));
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname,"/client/build/index.html"));
+});
 } else {
   app.get('/', (req, res) => {
     res.send("API is Running");
   });
 }
+
+
 
 //middleware for error Handler
 app.use(notFound);

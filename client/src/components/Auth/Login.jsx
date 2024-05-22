@@ -1,10 +1,11 @@
 
 import { Button, FormControl, FormLabel, Input, InputGroup, InputRightElement, VStack } from '@chakra-ui/react'
 import React, { useState } from 'react'
-import axios from "axios";
+// import axios from "axios";
 import { useToast } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 import { useChatState } from '../../Context/ChatProvider';
+import api from '../api';
 
 const Login = () => {
   
@@ -43,10 +44,11 @@ const Login = () => {
     //     {email, password},
     // config
     // );
-    const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/user/login`,
+    const response = await api.post(`${process.env.REACT_APP_API_URL}/api/user/login`,
     { email, password },
     config
 );
+
 const { data } = response;
 if (!data) {
     throw new Error("Unexpected response format");
