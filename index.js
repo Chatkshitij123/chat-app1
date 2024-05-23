@@ -18,7 +18,7 @@ const app = express();
 //to accept the json data
 app.use(express.json());
 // Enable CORS for all routes with specific origins
-const allowedOrigins = ['http://localhost:8000'];
+const allowedOrigins = ['http://localhost:8000','https://chat-app1-6y2q.onrender.com'];
 app.use(cors());
 app.use(cors({
   origin: function(origin, callback) {
