@@ -19,10 +19,11 @@ import {
 } from "@chakra-ui/modal";
 import { Tooltip } from "@chakra-ui/tooltip";
 import { BellIcon, ChevronDownIcon } from "@chakra-ui/icons";
+import api from '../api';
 import { Avatar } from "@chakra-ui/avatar";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import axios from "axios";
+// import axios from "axios";
 import { useToast } from "@chakra-ui/toast";
 // import ChatLoading from "../ChatLoading";
 import { Spinner } from "@chakra-ui/spinner";
@@ -76,7 +77,7 @@ function SideDrawer() {
         },
       };
 
-      const { data } = await axios.get(`${process.env.REACT_APP_API_URL}/api/user?search=${search}`, config);
+      const { data } = await api.get(`/api/user?search=${search}`, config);
 
       setLoading(false);
       setSearchResult(data);
@@ -103,7 +104,7 @@ function SideDrawer() {
           Authorization: `Bearer ${user.token}`,
         },
       };
-      const { data } = await axios.post(`${process.env.REACT_APP_API_URL}/api/chat`, { userId }, config);
+      const { data } = await api.post(`/api/chat`, { userId }, config);
       // here from this line we are getting the new chat
       // but what if the chat exists in the chat list in my chats we are going to append it
 

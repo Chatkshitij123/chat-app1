@@ -15,9 +15,10 @@ import {
 } from "@chakra-ui/react";
 import { useDisclosure } from "@chakra-ui/hooks";
 import { useChatState } from "../../Context/ChatProvider";
-import axios from "axios";
+// import axios from "axios";
 import UserListItem from "../UserAvatar/UserListItem";
 import UserBadgeItem from "../UserAvatar/UserBadgeItem";
+import api from '../api';
 
 const GroupChatModal = ({ children }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -45,7 +46,7 @@ const GroupChatModal = ({ children }) => {
         },
       };
 
-      const { data } = await axios.get(`${process.env.REACT_APP_API_URL}/api/user?search=${search}`, config);
+      const { data } = await api.get(`/api/user?search=${search}`, config);
       console.log(data);
       setLoading(false);
       setSearchResult(data);
@@ -78,7 +79,7 @@ const GroupChatModal = ({ children }) => {
             },
           };
     
-          const { data } = await axios.post(`${process.env.REACT_APP_API_URL}/api/chat/group`,{
+          const { data } = await api.post(`/api/chat/group`,{
             name: groupChatName,
             users: JSON.stringify(selectedUsers.map((u) => u._id))
           }, config);

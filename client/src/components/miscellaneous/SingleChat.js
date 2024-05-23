@@ -16,10 +16,11 @@ import { getSender, getSenderFull } from "../../config/ChatLogics";
 import ProfileModal from "./ProfileModal";
 
 import UpdatedChatGroupModal from "./UpdateGroupModal";
-import axios from "axios";
+// import axios from "axios";
 import ScrollableChat from "./ScrollableChat";
 import io from "socket.io-client";
 import animationData from "../../animations/typing.json";
+import api from '../api';
 
 const ENDPOINT = process.env.REACT_APP_API_URL;
 var socket, selectedChatCompare;
@@ -52,7 +53,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
       };
       setLoading(true);
 
-      const {data} = await axios.get(`${process.env.REACT_APP_API_URL}/api/message/${selectedChat._id}`, config);
+      const {data} = await api.get(`/api/message/${selectedChat._id}`, config);
       console.log(data);
       setMessages(data);//after fetching all the messages we use it in the state
       setLoading(false);
@@ -82,8 +83,8 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
         };
         setNewMessage("");
         //I want this message to be empty before the api call
-        const { data } = await axios.post(
-          `${process.env.REACT_APP_API_URL}/api/message`,
+        const { data } = await api.post(
+          `/api/message`,
           {
             content: newMessage,
             chatId: selectedChat,

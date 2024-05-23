@@ -20,7 +20,8 @@ import {
 import { ViewIcon } from '@chakra-ui/icons';
 import { useChatState } from '../../Context/ChatProvider';
 import UserBadgeItem from '../UserAvatar/UserBadgeItem';
-import axios from 'axios';
+// import axios from 'axios';
+import api from '../api';
 import UserListItem from '../UserAvatar/UserListItem';
 const UpdatedChatGroupModal = ({fetchAgain, setFetchAgain, fetchMessages}) => {
     const { isOpen, onOpen, onClose } = useDisclosure();
@@ -52,8 +53,8 @@ const UpdatedChatGroupModal = ({fetchAgain, setFetchAgain, fetchMessages}) => {
           Authorization: `Bearer ${user.token}`,
         },
       };
-      const { data } = await axios.put(
-        `${process.env.REACT_APP_API_URL}/api/chat/groupremove`,
+      const { data } = await api.put(
+        `/api/chat/groupremove`,
         {
           chatId: selectedChat._id,
           userId: user1._id,
@@ -102,8 +103,8 @@ const UpdatedChatGroupModal = ({fetchAgain, setFetchAgain, fetchMessages}) => {
             },
           };
 
-          const { data } = await axios.put(
-            `${process.env.REACT_APP_API_URL}/api/chat/rename`,
+          const { data } = await api.put(
+            `/api/chat/rename`,
             {
               chatId: selectedChat._id,
               chatName: groupChatName,
@@ -145,7 +146,7 @@ const UpdatedChatGroupModal = ({fetchAgain, setFetchAgain, fetchMessages}) => {
         },
       };
 
-      const { data } = await axios.get(`${process.env.REACT_APP_API_URL}/api/user?search=${search}`, config);
+      const { data } = await api.get(`/api/user?search=${search}`, config);
       console.log(data);
       setLoading(false);
       setSearchResult(data);
@@ -191,8 +192,8 @@ const UpdatedChatGroupModal = ({fetchAgain, setFetchAgain, fetchMessages}) => {
           Authorization: `Bearer ${user.token}`,
         },
       };
-      const { data } = await axios.put(
-        `${process.env.REACT_APP_API_URL}/api/chat/groupadd`,
+      const { data } = await api.put(
+        `/api/chat/groupadd`,
         {
           chatId: selectedChat._id,
           userId: user1._id,

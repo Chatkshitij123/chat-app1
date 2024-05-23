@@ -44,7 +44,7 @@ const Login = () => {
     //     {email, password},
     // config
     // );
-    const response = await api.post(`${process.env.REACT_APP_API_URL}/api/user/login`,
+    const response = await api.post(`/api/user/login`,
     { email, password },
     config
 );

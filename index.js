@@ -19,6 +19,7 @@ const app = express();
 app.use(express.json());
 // Enable CORS for all routes with specific origins
 const allowedOrigins = ['http://localhost:8000'];
+app.use(cors());
 app.use(cors({
   origin: function(origin, callback) {
     if (!origin || allowedOrigins.includes(origin)) {

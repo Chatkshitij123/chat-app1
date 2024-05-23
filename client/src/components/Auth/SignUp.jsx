@@ -13,8 +13,9 @@ import {
 import React, { useState } from "react";
 import { useToast } from "@chakra-ui/react";
 import cloudinaryConfig from "../../Config";
-import axios from "axios";
+// import axios from "axios";
 import {useNavigate} from "react-router-dom";
+import api from '../api';
 // import { useToast } from "@chakra-ui/react";
 
 const SignUp = () => {
@@ -108,7 +109,7 @@ const SignUp = () => {
         
         },
        };
-       const {data} = await axios.post(`${process.env.REACT_APP_API_URL}/api/user`,
+       const {data} = await api.post(`/api/user`,
     {name, email, password, pic},
 config
 );
