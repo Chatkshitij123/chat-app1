@@ -31,25 +31,31 @@
 <img src="https://github.com/Chatkshitij123/chat-app1/assets/113652625/ab0ba317-b7e3-4fad-84c4-c9878de9e03f" alt="Login Page">
 <img src="https://github.com/Chatkshitij123/chat-app1/assets/113652625/17b38317-6df9-42a5-a649-0cf637d8c529" alt="Sign Up Page">
 <h3>Real Time Chatting with Typing Indicators</h3>
-<img src="E:\React Projects\ChatApp-New\server\client\src\assets\real time chatting with typing indicators.png" alt="Real Time Chatting">
+<img src="https://github.com/Chatkshitij123/chat-app1/assets/113652625/9f89b4ab-d031-43d7-93c8-44050c0bdf6f" alt="Real Time Chatting">
 
 <h3>One to One Chat</h3>
-<img src="https://github.com/Chatkshitij123/chat-app1/assets/113652625/9f89b4ab-d031-43d7-93c8-44050c0bdf6f" alt="One to One Chat">
+<img src="https://github.com/Chatkshitij123/chat-app1/assets/113652625/0c5c28c4-46a9-4b5d-8c22-de6fb5b3701a" alt="One to One Chat">
+
 
 
 <h3>Search Users</h3>
-<img src="E:\React Projects\ChatApp-New\server\client\src\assets\search users.png" alt="Search Users">
+<img src="https://github.com/Chatkshitij123/chat-app1/assets/113652625/254030f7-4a27-44e6-83d7-ed059e6238e0" alt="Search Users">
+
 
 <h3>Create Group Chats</h3>
-<img src="E:\React Projects\ChatApp-New\server\client\src\assets\create group chats.png" alt="Create Group Chats">
+<img src="https://github.com/Chatkshitij123/chat-app1/assets/113652625/c826d1e0-3d96-471f-88d6-d881ecc2bb47" alt="Create Group Chats">
+
 
 <h3>Notifications</h3>
-<img src="E:\React Projects\ChatApp-New\server\client\src\assets\notifications.png" alt="Notifications">
+<img src="https://github.com/Chatkshitij123/chat-app1/assets/113652625/4ec3e2b4-8de5-46ee-8ce4-eca786f27caa" alt="Notifications">
+
 
 <h3>Add or Remove Users from Group</h3>
-<img src="E:\React Projects\ChatApp-New\server\client\src\assets\add or remove users.png" alt="Add or Remove Users from Group">
+<img src="https://github.com/Chatkshitij123/chat-app1/assets/113652625/af923002-ec95-47dc-a7ef-ab08a4d32629" alt="Add or Remove Users from Group">
+
+
 
 <h3>View Other User Profile</h3>
-<img src="E:\React Projects\ChatApp-New\server\client\src\assets\view other profile.png" alt="View Other User Profile">
+<img src="https://github.com/Chatkshitij123/chat-app1/assets/113652625/e4140711-8c88-43a9-92b4-778ce5d07263" alt="View Other User Profile">
 
 <p>Made By @Chatkshitij123</p>
