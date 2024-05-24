@@ -30,12 +30,12 @@
 <h3>Authentication</h3>
 <img src="https://github.com/Chatkshitij123/chat-app1/assets/113652625/ab0ba317-b7e3-4fad-84c4-c9878de9e03f" alt="Login Page">
 <img src="https://github.com/Chatkshitij123/chat-app1/assets/113652625/17b38317-6df9-42a5-a649-0cf637d8c529" alt="Sign Up Page">
-![signuppage]()
 <h3>Real Time Chatting with Typing Indicators</h3>
 <img src="E:\React Projects\ChatApp-New\server\client\src\assets\real time chatting with typing indicators.png" alt="Real Time Chatting">
 
 <h3>One to One Chat</h3>
-<img src="E:\React Projects\ChatApp-New\server\client\src\assets\one-to-one chat.png" alt="One to One Chat">
+<img src="https://github.com/Chatkshitij123/chat-app1/assets/113652625/9f89b4ab-d031-43d7-93c8-44050c0bdf6f" alt="One to One Chat">
+
 
 <h3>Search Users</h3>
 <img src="E:\React Projects\ChatApp-New\server\client\src\assets\search users.png" alt="Search Users">
