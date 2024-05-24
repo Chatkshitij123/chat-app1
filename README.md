@@ -28,7 +28,7 @@
 
 <h2>Features</h2>
 <h3>Authentication</h3>
-![loginpage](https://github.com/Chatkshitij123/chat-app1/assets/113652625/ab0ba317-b7e3-4fad-84c4-c9878de9e03f)
+<img src="https://github.com/Chatkshitij123/chat-app1/assets/113652625/ab0ba317-b7e3-4fad-84c4-c9878de9e03f" alt="Login Page">
 
 <img src="E:\React Projects\ChatApp-New\server\client\src\assets\signuppage.png" alt="Signup Page">
 
