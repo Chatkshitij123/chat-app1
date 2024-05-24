@@ -28,7 +28,8 @@
 
 <h2>Features</h2>
 <h3>Authentication</h3>
-<img src="E:\React Projects\ChatApp-New\server\client\src\assets\loginpage.png" alt="Login Page">
+![loginpage](https://github.com/Chatkshitij123/chat-app1/assets/113652625/ab0ba317-b7e3-4fad-84c4-c9878de9e03f)
+
 <img src="E:\React Projects\ChatApp-New\server\client\src\assets\signuppage.png" alt="Signup Page">
 
 <h3>Real Time Chatting with Typing Indicators</h3>
