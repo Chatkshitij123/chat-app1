@@ -58,4 +58,4 @@
 <h3>View Other User Profile</h3>
 <img src="https://github.com/Chatkshitij123/chat-app1/assets/113652625/e4140711-8c88-43a9-92b4-778ce5d07263" alt="View Other User Profile">
 
-<p>Made By @Chatkshitij123</p>
+<p><a href="https://github.com/Chatkshitij123/chat-app1/commits?author=Chatkshitij123"Made By @Chatkshitij123</a></p>
